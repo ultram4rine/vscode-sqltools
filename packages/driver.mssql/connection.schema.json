@@ -44,7 +44,8 @@
     "connectionTimeout": {
       "title": "Connection Timeout",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "default": 15
     },
     "mssqlOptions": {
       "type": "object",
@@ -67,6 +68,10 @@
         "encrypt": {
           "type": "boolean",
           "default": true
+        },
+        "trustServerCertificate": {
+          "type": "boolean",
+          "default": false
         },
         "tdsVersion": {
           "type": "string",

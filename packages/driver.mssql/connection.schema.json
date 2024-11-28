@@ -121,7 +121,6 @@
           "required": [
             "server",
             "port",
-            "database",
             "username"
           ]
         },
@@ -149,7 +148,6 @@
           },
           "required": [
             "socketPath",
-            "database",
             "username"
           ]
         },

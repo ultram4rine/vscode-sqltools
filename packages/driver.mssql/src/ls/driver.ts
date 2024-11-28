@@ -157,7 +157,15 @@ export default class MSSQL extends AbstractDriver<MSSQLLib.ConnectionPool, any> 
   private async getChildrenForGroup({ parent, item }: Arg0<IConnectionDriver['getChildrenForItem']>) {
     switch (item.childType) {
       case ContextValue.SCHEMA:
-        return this.queryResults(this.queries.fetchSchemas(parent as NSDatabase.IDatabase));
+        try {
+          const result = await this.queryResults(
+            this.queries.fetchSchemas(parent as NSDatabase.IDatabase)
+          );
+          return result;
+        } catch (error) {
+          this.close();
+          return [];
+        }
       case ContextValue.TABLE:
         return this.queryResults(this.queries.fetchTables(parent as NSDatabase.ISchema));
       case ContextValue.VIEW:

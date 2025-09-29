@@ -32,7 +32,7 @@ If applicable, add screenshots to help explain your problem.
  - Driver:
    - [ ] PostgreSQL/Redshift
    - [ ] MySQL/MariaDB
-   - [ ] MSSQL/Azure
+   - [ ] MSSQL
    - [ ] SQLite
    - [ ] Other? Which...
  - Database version: [e.g. MySQL v5.6, PostgreSQL vX...]

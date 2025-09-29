@@ -168,7 +168,7 @@ export interface IConnection<DriverOptions = any> {
   cqlOptions?: DriverOptions;
 
   /**
-   * Connection domain (for MSSQL/Azure only)
+   * Connection domain (for MSSQL only)
    * @type {string}
    * @memberof IConnection
    */
